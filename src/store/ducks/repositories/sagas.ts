@@ -4,14 +4,14 @@ import { AxiosResponse } from 'axios';
 import api from '../../../services/api';    
 import { loadSuccess, loadFailure } from './actions';
 
-// Defina o tipo de um repositório
+// Aqui define o tipo d um repositório
 interface Repository {
   id: number;
   name: string;
-  // Adicione outros campos conforme necessário
+  // E posso adcionar outrso campos conforme necessario
 }
 
-// Defina o tipo da resposta da API
+//tipo da resposta da API
 type ApiResponse = Repository[];
 
 export function* load(): Generator<any, void, AxiosResponse<ApiResponse>> {

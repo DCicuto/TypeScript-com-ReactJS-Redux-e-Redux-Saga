@@ -10,6 +10,8 @@ import * as RepositoriesActions from "../../store/ducks/repositories/actions";
 
 import { RootState } from "../../store";
 
+import RepositoryItem from "../RepositoryItem";
+
 //A StateProps, mapeia o tipo das informações que vem através di mapStatetoProps do Redux
 interface StateProps {
     repositories: Repository [];
@@ -35,7 +37,7 @@ class RepositoryList extends Component <Props> {
         return (
             <ul>
                 {repositories.map((repository) => (
-                    <li key={repository.id}>{repository.name}</li>
+                    <RepositoryItem key={repository.id} repository={repository}/>
                 ))}
             </ul>
         );
